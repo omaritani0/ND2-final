@@ -105,9 +105,9 @@ const Add = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const author = posts.length ? posts[posts.length-1].author+1 : 1;
+    const author = 1;
     const dateTime = format(new Date(), 'MMMM dd, yyyy pp');
-    const newPost = {author, postTitle, dateTime, text};
+    const newPost = {id: author, title: postTitle, datecreated: dateTime, text, author: author};
     try {
       const response = await api.post('article-create/', newPost, {headers: {
         'Authorization': 'Bearer ' + authTokens.access}
