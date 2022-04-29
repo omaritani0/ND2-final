@@ -122,30 +122,30 @@ const Add = () => {
     }
   }
 
-  const handleEdit = async (id) => {
-    const dateTime = format(new Date(), 'MMMM dd, yyyy pp');
-    const updatedPost = {author, title: editTitle, dateTime, text: editText}; 
-    try {
-      const response = await api.put('article-update/<str:pk>/');
-      setPosts(posts.map(post => post.id === id ? {...response.data} : post));
-      setEditTitle('');
-      setEditText('');
-      history.push('/');
-    } catch (error) {
-      console.log(err.message);
-    }
-  }
+  // const handleEdit = async (id) => {
+  //   const dateTime = format(new Date(), 'MMMM dd, yyyy pp');
+  //   const updatedPost = {author, title: editTitle, dateTime, text: editText}; 
+  //   try {
+  //     const response = await api.put('article-update/<str:pk>/');
+  //     setPosts(posts.map(post => post.id === id ? {...response.data} : post));
+  //     setEditTitle('');
+  //     setEditText('');
+  //     history.push('/');
+  //   } catch (error) {
+  //     console.log(err.message);
+  //   }
+  // }
 
-  const handleDelete = async (id) => {
-    try {
-      await api.delete('article-delete/<str:pk>/')
-      const postsList = posts.filter(post => post.id !== id);
-      setPosts(postsList);
-      navigate('/');
-    } catch(err) {
-      console.log(err.message);
-    }
-  }
+  // const handleDelete = async (id) => {
+  //   try {
+  //     await api.delete('article-delete/<str:pk>/')
+  //     const postsList = posts.filter(post => post.id !== id);
+  //     setPosts(postsList);
+  //     navigate('/');
+  //   } catch(err) {
+  //     console.log(err.message);
+  //   }
+  // }
 
 
   return (
