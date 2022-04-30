@@ -31,7 +31,8 @@ const App = () => {
   const classes = useStyles();
   let { authTokens } = useContext(AuthContext);
   if (authTokens == null) {
-    window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/", 7)) + "login"
+    window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/", 7)) + "login";
+    location.reload();
   } else {
     return (
       <div>
