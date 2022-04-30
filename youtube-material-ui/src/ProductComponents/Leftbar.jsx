@@ -77,7 +77,7 @@ const Leftbar = () => {
       <div>
         <Link to="/FacilityDisplay">
           <Storefront className={classes.icon} />
-          <Typography className={classes.text}>خدمات</Typography>
+          <Typography className={classes.text}>بنايات</Typography>
         </Link>
       </div>
     </Container>
