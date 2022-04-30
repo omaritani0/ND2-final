@@ -7,6 +7,7 @@ import {
   Settings,
   Storefront,
 } from "@material-ui/icons";
+import {Link} from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -50,28 +51,28 @@ const Leftbar = () => {
   return (
     <Container className={classes.container}>
       <div className={classes.item}>
-        <Home className={classes.icon} />
-        <Typography className={classes.text}>الصفحة الرئيسية</Typography>
+        <Link to="/JobDisplay">
+          <Home className={classes.icon} />
+          <Typography className={classes.text}>الصفحة الرئيسية</Typography>
+        </Link>
       </div>
       <div className={classes.item}>
-        <Bookmark className={classes.icon} />
-        <Typography className={classes.text}>المناسبات</Typography>
+        <Link to="/JobDisplay">
+          <Person className={classes.icon} />
+          <Typography className={classes.text}>وظائف</Typography>
+        </Link>
       </div>
       <div className={classes.item}>
-        <Person className={classes.icon} />
-        <Typography className={classes.text}>وظائف</Typography>
+        <Link to="/ProductDisplay">
+          <Storefront className={classes.icon} />
+          <Typography className={classes.text}>السوق</Typography>
+        </Link>
       </div>
-      <div className={classes.item}>
-        <Storefront className={classes.icon} />
-        <Typography className={classes.text}>السوق</Typography>
-      </div>
-      <div className={classes.item}>
-        <Settings className={classes.icon} />
-        <Typography className={classes.text}>اعدادات</Typography>
-      </div>
-      <div className={classes.item}>
-        <ExitToApp className={classes.icon} />
-        <Typography className={classes.text}>الخروج</Typography>
+      <div>
+        <Link to="/EventDisplay">
+          <Storefront className={classes.icon} />
+          <Typography className={classes.text}>مناسبات</Typography>
+        </Link>
       </div>
     </Container>
   );

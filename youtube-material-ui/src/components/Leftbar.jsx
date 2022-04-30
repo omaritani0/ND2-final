@@ -12,7 +12,7 @@ import {
   TabletMac,
   Router,
 } from "@material-ui/icons";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -56,8 +56,8 @@ const Leftbar = () => {
   return (
     <Container className={classes.container}>
       <div className={classes.item}>
-          <Home className={classes.icon} />
-          <Typography className={classes.text}>الصفحة الرئيسية</Typography>
+        <Home className={classes.icon} />
+        <Typography className={classes.text}>الصفحة الرئيسية</Typography>
       </div>
       <div className={classes.item}>
         <Link to="/JobDisplay">
@@ -66,15 +66,21 @@ const Leftbar = () => {
         </Link>
       </div>
       <div className={classes.item}>
-      <Link to="/ProductDisplay">
-        <Storefront className={classes.icon} />
-        <Typography className={classes.text}>السوق</Typography>
+        <Link to="/ProductDisplay">
+          <Storefront className={classes.icon} />
+          <Typography className={classes.text}>السوق</Typography>
         </Link>
       </div>
       <div>
-      <Link to="/EventDisplay">
-        <Storefront className={classes.icon} />
-        <Typography className={classes.text}>مناسبات</Typography>
+        <Link to="/EventDisplay">
+          <Storefront className={classes.icon} />
+          <Typography className={classes.text}>مناسبات</Typography>
+        </Link>
+      </div>
+      <div>
+        <Link to="/EventDisplay">
+          <Storefront className={classes.icon} />
+          <Typography className={classes.text}>خدمات</Typography>
         </Link>
       </div>
     </Container>
