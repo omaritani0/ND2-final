@@ -124,14 +124,13 @@ const Add = () => {
 
   const handleEdit = async (id) => {
     const dateTime = format(new Date(), 'MMMM dd, yyyy pp');
-    const updatedPost = {author, title: editTitle, dateTime, text: editText};
+    const updatedPost = {title: editTitle, dateTime, text: editText};
     try {
       const response = await api.put('article-update/<str:pk>/');
       setPosts(posts.map(post => post.id === id ? {...response.data} : post));
       setEditTitle('');
       setEditText('');
-      history.push('/');
-    } catch (error) {
+    } catch (err) {
       console.log(err.message);
     }
   }
