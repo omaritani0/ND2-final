@@ -7,6 +7,7 @@ import Navbar from "./components/Navbar";
 import Rightbar from "./components/Rightbar";
 import JobDisplay from "./JobComponents/JobDisplay.jsx";
 import ProductDisplay from "./ProductComponents/ProductDisplay.jsx";
+import FacilityDisplay from "./ProductComponents/FacilityDisplay.jsx";
 import EventDisplay from "./EventComponents/EventDisplay.jsx";
 import Login from "./Pages/Login.js";
 import Register from "./Pages/Register.js";
@@ -85,6 +86,10 @@ const routes = [
   {
     path: "/ProductDisplay",
     component: ProductDisplay,
+  },
+  {
+    path: "/FacilityDisplay",
+    component: FacilityDisplay,
   },
   {
     path: "/EventDisplay",

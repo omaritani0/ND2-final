@@ -74,6 +74,12 @@ const Leftbar = () => {
           <Typography className={classes.text}>مناسبات</Typography>
         </Link>
       </div>
+      <div>
+        <Link to="/FacilityDisplay">
+          <Storefront className={classes.icon} />
+          <Typography className={classes.text}>خدمات</Typography>
+        </Link>
+      </div>
     </Container>
   );
 };

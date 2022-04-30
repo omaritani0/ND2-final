@@ -78,7 +78,7 @@ const Leftbar = () => {
         </Link>
       </div>
       <div>
-        <Link to="/EventDisplay">
+        <Link to="/FacilityDisplay">
           <Storefront className={classes.icon} />
           <Typography className={classes.text}>خدمات</Typography>
         </Link>
