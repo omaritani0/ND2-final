@@ -1,6 +1,6 @@
 import { Grid, makeStyles } from "@material-ui/core";
-import AddProduct from "./AddProduct";
-import FeedProduct from "./FeedProduct";
+import AddFacility from "./AddFacility";
+import FeedFacility from "./FeedFacility";
 import Leftbar from "./Leftbar";
 import Navbar from "./Navbar";
 
@@ -22,12 +22,12 @@ const FacilityDisplay = () => {
           <Leftbar />
         </Grid>
         <Grid item sm={7} xs={10}>
-          <FeedProduct />
+          <FeedFacility />
         </Grid>
         <Grid item sm={3} className={classes.right}>
         </Grid>
       </Grid>
-      <AddProduct />
+      <AddFacility />
     </div>
   );
 };
