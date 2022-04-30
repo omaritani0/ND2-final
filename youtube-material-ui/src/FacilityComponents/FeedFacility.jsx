@@ -11,12 +11,9 @@ const FeedFacility = () => {
   const classes = useStyles();
   return (
     <Container className={classes.container}>
-      <Facility title="صوفا للبيع ، هذه الأريكة بحالة مقبولة وتباع بـ 100 دولار فقط" img="https://cdn20.pamono.com/p/g/9/5/952849_1qq3vb36ge/antique-sofa-2.jpg"/>
-      <Facility title="قمصان للبيع ، التي تم ارتداؤها مرة واحدة فقط ، تباع بـ 35 دولارًا فقط" img="https://images.olx.com.lb/thumbnails/355919-400x300.jpeg"/>
-      <Facility title="أجهزة إلكترونية للبيع ، هذه الأجهزة الإلكترونية بحالة جيدة جدًا ولا تزال تعمل كالجديدة. تم بيع المجموعة الكاملة مقابل 200 دولار" img="https://images.olx.com.lb/thumbnails/4240477-400x300.jpeg"/>
-      {/* <Facility title="Recipes That Will Make You Crave More" img="https://images.pexels.com/photos/7245477/pexels-photo-7245477.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
-      <Facility title="Shortcut Travel Guide to Manhattan" img="https://images.pexels.com/photos/7078467/pexels-photo-7078467.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
-      <Facility title="Killer Actions to Boost Your Self-Confidence" img="https://images.pexels.com/photos/7833646/pexels-photo-7833646.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/> */}
+      <Facility title="رودسترز داينر" img="https://img1.beirut.com/GetImage/mainpicture/locale/142"/>
+      <Facility title="صيدلية الحمرا" img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy-s8AdZb-X0GLqOMLo5OAyZT4gtmxGAMy6nwsDdJMYePW-LfWHv1vJQeTXjO_jrARxp8&usqp=CAU"/>
+      <Facility title="صالة اتلانتس الرياضية" img="https://assets.gosawa.com/storage/32000/8800/59c580f4a9c1b51aea00d46c170f53b3.jpg"/>
     </Container>
   );
 };
