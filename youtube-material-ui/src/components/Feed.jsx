@@ -11,7 +11,7 @@ const Feed = () => {
   const classes = useStyles();
   return (
     <Container className={classes.container}>
-      <Post title="اختر التصميم المثالي" img="https://images.pexels.com/photos/7319337/pexels-photo-7319337.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
+      <Post title="اختر التصميم المثالي" img="https://www.socialtables.com/wp-content/uploads/2016/10/iStock-540095978.jpg"/>
       <Post title="ببساطة وصفات أقل إجهادًا. المزيد من الفرح" img="https://images.pexels.com/photos/7363671/pexels-photo-7363671.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
       <Post title="ماذا تفعل في لندن" img="https://images.pexels.com/photos/7245535/pexels-photo-7245535.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
       <Post title="الوصفات التي ستجعلك تتوق أكثر" img="https://images.pexels.com/photos/7245477/pexels-photo-7245477.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"/>
