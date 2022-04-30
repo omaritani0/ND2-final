@@ -12,19 +12,13 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
+import { useContext } from 'react';
+import AuthContext from '../context/AuthContext.js';
 
 const theme = createTheme();
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+  let {registerUser} = useContext(AuthContext);
 
   return (
     <ThemeProvider theme={theme}>
@@ -44,7 +38,7 @@ export default function SignUp() {
           <Typography component="h1" variant="h5">
           إنضم إلى حارتك
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" noValidate onSubmit={registerUser} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12} sm={6}>
                 <TextField
@@ -105,7 +99,7 @@ export default function SignUp() {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link href="#" variant="body2">
+                <Link href={window.location.href.substring(0, window.location.href.lastIndexOf("/", 7)) + "login"} variant="body2">
                 هل لديك حساب بالفعل؟ تسجيل الدخول
                 </Link>
               </Grid>

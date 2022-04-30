@@ -19,14 +19,6 @@ const theme = createTheme();
 
 export default function SignInSide() {
   let { loginUser } = useContext(AuthContext);
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   const data = new FormData(event.currentTarget);
-  //   console.log({
-  //     email: data.get('email'),
-  //     password: data.get('password'),
-  //   });
-  // };
 
   return (
     <ThemeProvider theme={theme}>
@@ -102,7 +94,7 @@ export default function SignInSide() {
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link href="#" variant="body2">
+                  <Link href={window.location.href.substring(0, window.location.href.lastIndexOf("/", 7)) + "register"} variant="body2">
                     {"ليس لديك حساب حتى الآن؟ التسجيل"}
                   </Link>
                 </Grid>

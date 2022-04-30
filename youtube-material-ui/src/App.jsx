@@ -8,7 +8,6 @@ import Rightbar from "./components/Rightbar";
 import JobDisplay from "./JobComponents/JobDisplay.jsx";
 import ProductDisplay from "./ProductComponents/ProductDisplay.jsx";
 import EventDisplay from "./EventComponents/EventDisplay.jsx";
-import Loginpage from "./Pages/Loginpage.js";
 import Login from "./Pages/Login.js";
 import Register from "./Pages/Register.js";
 import React, { useContext } from "react";
@@ -93,15 +92,11 @@ const routes = [
   },
   {
     path: "/Login",
-    component: Loginpage,
+    component: Login,
   },
   {
     path: "/Register",
     component: Register,
-  },
-  {
-    path: "/Login_new",
-    component: Login,
   }
 ];
 

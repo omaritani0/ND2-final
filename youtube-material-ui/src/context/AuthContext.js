@@ -16,17 +16,31 @@ export const AuthProvider = ({ children }) => {
         let response = await api.post('token/',
             { 'email': e.target.email.value, 'password': e.target.password.value },
         );
-        console.log(response);
         let data = await response.data
 
         if (response.status === 200) {
-            console.log("123")
             setAuthTokens(data)
             setUser(jwt_decode(data.access))
             localStorage.setItem('authTokens', JSON.stringify(data))
             window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/", 7))
         } else {
-            console.log("123")
+            alert('Something went wrong!')
+        }
+    }
+
+    let registerUser = async (e) => {
+        e.preventDefault()
+        console.log(123);
+        let response = await api.post('register/',
+            { 'email': e.target.email.value, 'password': e.target.password.value },
+        );
+        console.log(response);
+        let data = await response.data
+
+        if (response.status === 200) {
+            console.log(window.location.href.substring(0, window.location.href.lastIndexOf("/", 7)) + "login");
+            window.location.href = window.location.href.substring(0, window.location.href.lastIndexOf("/", 7)) + "login";
+        } else {
             alert('Something went wrong!')
         }
     }
