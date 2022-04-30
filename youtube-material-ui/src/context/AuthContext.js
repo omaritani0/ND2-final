@@ -88,7 +88,7 @@ export const AuthProvider = ({ children }) => {
         }, fourMinutes)
         return () => clearInterval(interval)
 
-    }, [authTokens, loading, authTokens?.access, updateToken])
+    }, [authTokens, loading])
 
     console.log(contextData);
     console.log(loading);
