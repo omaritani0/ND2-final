@@ -122,30 +122,30 @@ const Add = () => {
     }
   }
 
-  // const handleEdit = async (id) => {
-  //   const dateTime = format(new Date(), 'MMMM dd, yyyy pp');
-  //   const updatedPost = {author, title: editTitle, dateTime, text: editText}; 
-  //   try {
-  //     const response = await api.put('article-update/<str:pk>/');
-  //     setPosts(posts.map(post => post.id === id ? {...response.data} : post));
-  //     setEditTitle('');
-  //     setEditText('');
-  //     history.push('/');
-  //   } catch (error) {
-  //     console.log(err.message);
-  //   }
-  // }
+  const handleEdit = async (id) => {
+    const dateTime = format(new Date(), 'MMMM dd, yyyy pp');
+    const updatedPost = {author, title: editTitle, dateTime, text: editText};
+    try {
+      const response = await api.put('article-update/<str:pk>/');
+      setPosts(posts.map(post => post.id === id ? {...response.data} : post));
+      setEditTitle('');
+      setEditText('');
+      history.push('/');
+    } catch (error) {
+      console.log(err.message);
+    }
+  }
 
-  // const handleDelete = async (id) => {
-  //   try {
-  //     await api.delete('article-delete/<str:pk>/')
-  //     const postsList = posts.filter(post => post.id !== id);
-  //     setPosts(postsList);
-  //     navigate('/');
-  //   } catch(err) {
-  //     console.log(err.message);
-  //   }
-  // }
+  const handleDelete = async (id) => {
+    try {
+      await api.delete('article-delete/<str:pk>/')
+      const postsList = posts.filter(post => post.id !== id);
+      setPosts(postsList);
+      navigate('/');
+    } catch(err) {
+      console.log(err.message);
+    }
+  }
 
 
   return (
@@ -179,38 +179,6 @@ const Add = () => {
                 size="small"
                 style={{ width: "100%" }}
               />
-            </div>
-            <div className={classes.item}>
-              <TextField select label="الرؤية" value="Public">
-                <MenuItem value="Public">عام</MenuItem>
-                <MenuItem value="Private">خاص</MenuItem>
-                <MenuItem value="Unlisted">غير مدرج</MenuItem>
-              </TextField>
-            </div>
-            <div className={classes.item}>
-              <FormLabel component="legend">من يمكنه التعليق؟</FormLabel>
-              <RadioGroup>
-                <FormControlLabel
-                  value="Everybody"
-                  control={<Radio size="small" />}
-                  label="الجميع"
-                />
-                <FormControlLabel
-                  value="My Friends"
-                  control={<Radio size="small" />}
-                  label="جيراني"
-                />
-                <FormControlLabel
-                  value="Nobody"
-                  control={<Radio size="small" />}
-                  label="لا أحد"
-                />
-                <FormControlLabel
-                  value="Custom"
-                  control={<Radio size="small" />}
-                  label="مخصص "
-                />
-              </RadioGroup>
             </div>
             <div className={classes.item}>
               <Button
