@@ -1,4 +1,5 @@
 import * as React from 'react';
+import {useContext} from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -12,18 +13,20 @@ import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import AuthContext from '../context/AuthContext.js';
 
 const theme = createTheme();
 
 export default function SignInSide() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+  let { loginUser } = useContext(AuthContext);
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   const data = new FormData(event.currentTarget);
+  //   console.log({
+  //     email: data.get('email'),
+  //     password: data.get('password'),
+  //   });
+  // };
 
   return (
     <ThemeProvider theme={theme}>
@@ -59,7 +62,7 @@ export default function SignInSide() {
             <Typography component="h1" variant="h5">
             أدخل إلى حارتك
             </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
+            <Box component="form" noValidate onSubmit={loginUser} sx={{ mt: 1 }}>
               <TextField
                 margin="normal"
                 required

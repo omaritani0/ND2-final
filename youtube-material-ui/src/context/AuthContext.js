@@ -14,7 +14,7 @@ export const AuthProvider = ({ children }) => {
     let loginUser = async (e) => {
         e.preventDefault()
         let response = await api.post('token/',
-            { 'email': e.target.username.value, 'password': e.target.password.value },
+            { 'email': e.target.email.value, 'password': e.target.password.value },
         );
         console.log(response);
         let data = await response.data
@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }) => {
             'refresh': authTokens?.refresh
         }
         ).catch(() => logoutUser());
-        
+
         let data = await response.data
 
         if (response.status === 200) {
